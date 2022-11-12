@@ -1,0 +1,50 @@
+@import "./settings";
+
+/* . add all the colors under color variables camelCase to below map for export the colors to TS */
+
+$theme-colors: (
+        primaryColor: $primary-color,
+        carbon900Color: $carbon-900-color,
+        carbon700Color: $carbon-700-color,
+        carbon500Color: $carbon-500-color,
+        carbon300Color: $carbon-300-color,
+        carbon50Color: $carbon-50-color,
+        greenColor: $green,
+        orangeColor: $orange,
+        lightOrangeColor: $light-orange-color,
+        disableOrangeColor: $disable-orange-color,
+        yellowColor: $yellow,
+        lightYellowColor: $light-yellow-color,
+        disableYellowColor: $disable-yellow-color,
+        roseColor: $rose,
+        lightRoseColor: $light-rose-color,
+        disableRoseColor: $disable-rose-color,
+        violet: $violet,
+        lightVioletColor: $light-violet-color,
+        disableVioletColor: $disable-violet-color,
+        successColor: $success-color,
+        warningColor: $warning-color,
+        errorColor: $error-color,
+        informationColor: $information-color,
+        blackColor: $black,
+        darkGrayColor: $dark-gray-color,
+        grayColor: $gray-color,
+        lightGrayColor: $light-gray-color,
+        offWhiteColor: $off-white-color,
+        whiteColor: $white,
+        disableColor: $disable-color,
+        backgroundLightColor: $background-light-color,
+        base20: $base-20,
+        offBlack: $off-black,
+        almostBlack: $almost-black,
+        dark: $dark,
+        red: $red,
+        darkRed:$dark-red-color
+);
+
+/* .export the colors to TS */
+:export {
+  @each $color, $value in $theme-colors {
+    #{$color}: #{$value}
+  }
+}

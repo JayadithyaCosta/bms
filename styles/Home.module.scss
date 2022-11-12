@@ -1,0 +1,1085 @@
+@import "settings";
+
+.imageBox {
+  max-width: 1000px;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.FAQdescription{
+  padding: 0 16px 0 45px;
+  @include respondTo($lg){
+    padding: 0;
+  }
+}
+.imageTest{
+  position: relative;
+  width: 90vw;
+  display: block;
+}
+
+.supportBox{
+  margin: 35px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overLay{
+  @extend .overLay1
+}
+.marginTop{
+margin-top: 50px;
+  @include respondTo($lg){
+    margin-top: 125px;
+  }
+}
+.TermsAndConditions{
+  //max-width: 1000px;
+  position: relative;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.web1{
+  width: 100vw;
+  display: none;
+}
+.web2{
+  @extend .web1;
+}
+.overLay2{
+  @extend .overLay1;
+  width: 100vw !important;
+}
+.featureOn{
+  padding: 65px 200px 150px 280px;
+}
+.sponsorTitle{
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+
+}
+.almostBlack{
+  @extend .subGreenGoals;
+  background: $almost-black;
+}
+.linklnBox{
+  height: 200px;
+  width: 200px ;
+  border-radius: 8px;
+  border: 1px solid $white;
+}
+
+.verticalBox{
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+//.textBox{
+//  height: 330px;
+//  display: flex;
+//  flex-direction: column;
+//  justify-content: space-between;
+//}
+.subscribe{
+  @extend .btn;
+  background: $violet !important;
+  height: 42px !important;
+}
+.copyRight{
+  width: 100%;
+  font-weight: 700 !important;
+}
+.webLogo{
+  display: none;
+  width: 192px;
+  height: 26px;
+}
+.mobileLogo{
+  width: 174px;
+  height: 24px;
+}
+.sponserslice{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.downArrow {
+  position: absolute;
+  bottom: 15%;
+  z-index: 1;
+  cursor: pointer;
+}
+.downArrowVision{
+  @extend .downArrow;
+}
+
+  .loader {
+    border: 8px solid $light-gray-color; /* Light grey */
+    border-top: 8px solid $primary-color; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  }
+
+.topologyImage{
+  position: relative;
+}
+.overLay1{
+  //max-width: 1000px;
+  width: 100%;
+  //height: 500px;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 88.46%;
+
+  background: rgba(0, 0, 0, 0.7);
+}
+.sideMenu{
+  position: fixed;
+  height: 400px;
+  width: 120px;
+  top: 251px;
+  left:6% ;
+  line-height: 3;
+  z-index: 2;
+  display: none;
+}
+.menuBox{
+  position: relative;
+}
+.professionalBtn{
+  position: absolute;
+  right:5%;
+  top: 7%;
+  display: none;
+
+}
+.btnText{
+  font-size: 16px;
+}
+.btnText1{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+}
+.fontSize16{
+  font-size: 16px;
+  line-height: 20px;
+}
+.scrollBtn{
+  position: absolute;
+  left: -15%;
+  bottom:-25%;
+  z-index: 1;
+  transform: rotate(270deg);
+}
+.btn2{
+  border-radius: 8px !important;
+  background-color: transparent !important;
+  border-color: $disable-color;
+  width: 156px;
+  height: 48px;
+  border: 1px solid $white !important;
+
+}
+.btn3{
+  @extend .btn2;
+  border: none !important;
+  display: flex;
+}
+.down{
+  transform: rotate(90deg);
+}
+.lineHeight {
+  line-height: 1.5;
+  font-size: 24px;
+}
+.menu{
+  font-size: 22px;
+  cursor: pointer;
+  position: relative;
+}
+.footerTitle{
+  font-size: 24px;
+  @include respondTo($lg){
+    font-size: 64px;
+  }
+}
+.fontSize30{
+  @extend .subText;
+  font-size: 16px;
+  @include respondTo($lg){
+    font-size: 30px;
+  }
+}
+.indecator {
+  height: 60%;
+  width: 3px;
+  background-color: $green;
+  position: absolute;
+  left: -20%;
+  top:20%;
+
+}
+.mobileSize{
+  width: 129px;
+  height: 39px;
+  display: none;
+}
+.mobileSize2{
+  @extend .mobileSize;
+  display: flex;
+}
+.btn{
+  border: none;
+  border-radius: 8px !important;
+  height: 40px;
+  width: 122px;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  background-color: $primary-color;
+}
+.imageBoxContact{
+  @extend .imageBox;
+ @include respondTo($lg){
+   height: unset !important;
+ }
+}
+.middleContent{
+  background: $footerColor;
+  padding: 20px 36px 40px 64px;
+  border-bottom: 1px solid $disable-color;
+  @include respondTo($lg){
+    padding: 62px 130px 60px 300px;
+  }
+}
+.PolicyHeading{
+  @extend .getStart;
+  height: 0 !important;
+
+}
+.web{
+  display: none;
+  position: relative;
+  width: 99%;
+  overflow-x: hidden;
+}
+.subFontSize{
+  font-size: 18px;
+  font-weight: 500 !important;
+  line-height: 22px;
+}
+.logo {
+  height: 120px;
+  padding: 0 24px;
+  position: fixed;
+  z-index: 1;
+  top:0;
+  //left: 3%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+}
+.darkLogo{
+  @extend .logo;
+  background: $black;
+}
+.mobileMenu{
+  cursor: pointer;
+  width: 90px;
+}
+
+.getStart{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  //margin: 382px 88px 281px 61px;
+  //padding: 266px 63px 113px 63px;
+  width: 235px;
+}
+.imageBox2{
+ width: 100%;
+  position: relative;
+
+}
+.imageBox3{
+  position: relative;
+  min-height: 480px;
+  max-width: 1000px;
+
+}
+//.overLay2{
+//  position: absolute;
+//  //max-width: 1000px;
+//  //height: 403px;
+//  width: 100vw;
+//  height: 100%;
+//  left: 0%;
+//  right: 0%;
+//  top:0%;
+//  background: rgba(0, 0, 0, 0.7);
+//}
+
+.black{
+ background-color: $almost-black;
+  position: relative;
+  margin-top: 0;
+  width: 100vw;
+  max-width: 100vw;
+  min-width: 100vw;
+
+}
+
+.introBox{
+  position: relative;
+}
+.outlineGreen{
+  position: absolute;
+  top:-105px;
+  left: 60%;
+  width: 94px;
+  height: 92px;
+  border-radius: 0 39.5px 0 31px;
+  border: 2px solid $primary-color;
+
+}
+.purpleLeaf{
+  position: absolute;
+  top:-23%;
+  background-color: $violet;
+  width: 36px;
+  height: 33px;
+  border-radius: 0 16px 0 16px;
+}
+.greenLeaf{
+  position: absolute;
+  width: 30px;
+  height: 44px;
+  background-color: $carbon-900-color;
+  top: 2%;
+  left: 100%;
+  border-radius: 0 32px 0 32px;
+}
+.yellowLeaf{
+  position: absolute;
+ width: 35px;
+  height: 52px;
+  border-radius: 0 48px 0 48px;
+  background-color: $yellow;
+  transform: rotate(-48deg);
+  left: 20%;
+  bottom: -30%;
+}
+.orangeLeaf{
+  position: absolute;
+ width: 50px;
+  height: 50px;
+  background-color: $light-orange-color;
+  border-radius: 48px 0 48px 0;
+  transform: rotate(-0.9deg);
+  left: 80%;
+  bottom: -22%;
+}
+.mainIntro{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: $black;
+  padding: 266px 63px 113px 63px;
+}
+.contact{
+  background-color: $footerColor;
+  padding: 44px 28px 10px 38px;
+  border-bottom: 2px solid $dark-gray-color;
+
+  h1{
+    font-size: 36px !important;
+  }
+  @include respondTo($lg){
+    padding: 100px 132px 100px 265px;
+    h1{
+      font-size: 60px !important;
+    }
+  }
+
+}
+.vision{
+  @extend .contact;
+  @include respondTo($lg){
+    padding: 100px 132px 100px 265px;
+  }
+  //@include respondTo($xl){
+  //  padding: 350px 132px 100px 265px;
+  //}
+}
+.margin{
+  margin-bottom: 60px;
+  margin-top: 100px;
+}
+
+.modal{
+  width: 270px !important;
+  padding: 20px;
+  @include respondTo($md){
+    width: 435px !important;
+    min-height: 200px;
+  }
+}
+.insideModal{
+  background: $off-white-color;
+  border-radius: 4px;
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+}
+
+.widthBox{
+  width: 100%;
+  @include respondTo($lg){
+    width: 50%;
+  }
+}
+.link{
+  text-decoration-color: $primary-color;
+}
+.inputName{
+  background: $almost-black !important;
+  color: $white !important;
+  width: 70%;
+}
+.input100{
+  @extend .inputName;
+  width: 95%;
+}
+.input{
+  @extend .inputName;
+  width: 100%;
+}
+.inquiry{
+  @extend .inputName;
+  width: 97%;
+  height: 160px;
+}
+.subText{
+  margin-top: 45px;
+  width: fit-content;
+
+}
+.fontWeight{
+  @extend .subText;
+  font-size: 16px;
+  font-weight: 400 !important;
+  line-height: 20px;
+}
+.greenIntro{
+  padding: 61px 63px 54px 63px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: fit-content;
+  background-color: $almost-black;
+  color: $white;
+  flex-direction: column;
+}
+.image{
+  width: 100%;
+  position: relative;
+  height: 500px;
+  @include respondTo($md){
+    height: unset;
+  }
+
+}
+.topologyText{
+  position: absolute;
+  top:7%;
+  text-align: end;
+  //left: 20%;
+  @include respondTo($md){
+    left: 20%;
+    top: 50%;
+  }
+  @include respondTo($lg){
+    top: 7%;
+  }
+  @include respondTo($xl){
+    top:33%;
+  }
+  @include respondTo($xxl){
+    top: 50%;
+  }
+}
+.checkBack{
+  @extend .btn;
+  background: transparent !important;
+  border: 1px solid $almost-black;
+  width: fit-content !important;
+
+}
+.subDes{
+  margin-top: 50px;
+  line-height: 20px;
+  width: 150px;
+}
+
+.choiceBox{
+  width: 100%;
+}
+.mainchoice{
+  //padding: 0px 34px 0px 40px;
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+
+}
+.privacy{
+  width: 100%;
+  display: none;
+}
+.privacy2{
+  width: 100%;
+}
+.mainchoice2{
+  @extend .mainchoice;
+  flex-direction: column-reverse;
+}
+.greenGoals{
+  background-color: $violet;
+  //height: 1438px;
+}
+.subGreenGoals{
+  padding: 50px 34px 70px 40px;
+  line-height: 140%;
+  font-size: 24px;
+  font-weight: 400 !important ;
+}
+.sponsorBox{
+  background-color: black;
+  //display: none;
+  padding: 50px 34px 70px 40px
+
+}
+.subSponsorBox{
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.commitment{
+  background: $black;
+  height: 40vh;
+  border-bottom: 1px solid $dark-gray-color;
+  @include respondTo($md){
+    height: 81vh;
+  }
+  @include respondTo($lg){
+    height: 88vh;
+  }
+  @include respondTo($xl){
+    height: 78vh;
+  }
+  @include respondTo($xxl){
+    height: 45vh;
+  }
+}
+.webView{
+  display: none;
+}
+.footerContent{
+  background: $black;
+  height: 100vh;
+}
+.FAQcontent{
+  background: $dark;
+}
+
+.FAQexpandableContent{
+  background: $dark;
+
+  padding: 80px 16px 40px 16px;
+  border-bottom: 1px solid $dark-gray-color;
+  @include respondTo($lg){
+    padding: 40px 56px 99px 268px;
+  }
+}
+.link{
+  text-decoration-color: $primary-color;
+}
+.footer{
+  @extend .subSponsorBox;
+  flex-direction: column !important;
+  background: $black;
+  padding: 47px 46px 149px 64px !important;
+
+  flex-direction: column;
+}
+.footerCommitment{
+  @extend .subSponsorBox;
+  flex-direction: column !important;
+  background: $black;
+  padding: 47px 46px 40px 64px !important ;
+}
+.nontextLogo{
+  height: 42px;
+  width: 42px;
+  margin-bottom: 40px;
+}
+.subLine{
+
+  line-height: 0;
+
+  .subLineHeight{
+  line-height: 0;
+  }
+}
+.batch{
+  display: flex;
+  margin-top: 50px;
+  width: 175px;
+  justify-content: space-between;
+}
+.subBatch{
+  width: 77px;
+}
+.logoFlex{
+  @extend .batch;
+  width: 100%;
+  @include respondTo($lg){
+    width: 650px;
+  }
+}
+.featureImage{
+  width: 174px;
+  @include respondTo($lg){
+    width: 320px;
+  }
+}
+
+.fontSize{
+  font-size: 24px;
+  margin-bottom: 50px;
+  line-height: 30px;
+}
+
+.about{
+  background-color: $black;
+}
+.socialMedia{
+  display: flex;
+}
+.facebook{
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.end{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@include respondTo($md){
+.topologyText{
+  top: 36%;
+}
+  .outlineGreen{
+    top: -80%;
+    left: 85%;
+  }
+  .greenLeaf{
+    top:5%;
+    left: 100%;
+  }
+  .yellowLeaf{
+    bottom: -65%;
+  }
+  .orangeLeaf{
+    bottom: -30%;
+  }
+  .scrollBtn{
+    left: -5%;
+  }
+  .getStart{
+    width: 400px;
+  }
+.imageTest{
+  width: 60vw;
+  margin-left: 215px;
+}
+}
+@include respondTo($lg){
+  .batch{
+    width: 207px;
+
+  }
+  .subBatch{
+    width: 100px;
+  }
+  .subDes{
+    width: 200px;
+  }
+  .sponsorTitle{
+    margin-left: 25px;
+    justify-content: flex-start;
+  }
+  .textBox{
+    height: 400px;
+  }
+  .mobView{
+    display: none;
+  }
+  .webView{
+    display: block;
+  }
+  .imageTest{
+    margin-left: 100px;
+  }
+  .subSponsorBox{
+    flex-direction: row;
+  }
+  .web1{
+    display: block;
+  }
+  //.privacy2{
+  //  display: none;
+  //}
+  //.privacy{
+  //  display: block;
+  //}
+
+.btnText1{
+  font-size: 16px;
+}
+  .fontSize,.fontSize16,.fontWeight{
+    font-size: 36px;
+    line-height: 45px;
+  }
+  .greenIntro{
+    padding: 132px 54px 75px 288px;
+  }
+  .web{
+    display: block;
+  }
+  .webLogo{
+    display: block;
+  }
+  .mobileLogo{
+    display: none;
+  }
+  .mob{
+    display: none;
+  }
+  .logo{
+    background-color: transparent;
+    padding: 52px 64px 44px 37px;
+    left: 3%;
+  }
+  .supportBox{
+    border-right: 1px solid $dark-gray-color;
+    border-left: 1px solid $dark-gray-color;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1%;
+    margin: unset;
+  }
+  .sponserslice{
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+    align-items: center;
+    padding-left: 1%;
+    width: 30%;
+  }
+
+  .privacy{
+    width: 46%;
+  }
+  .copyRight{
+    font-weight: 400 !important;
+  }
+  .mobileSize{
+    display: flex;
+    width: 167px;
+    height: 50px;
+  }
+  .mobileSize2{
+    display: none;
+  }
+  .mobileMenu{
+    display: none;
+  }
+  .downArrow{
+    top: 94%;
+  }
+  .downArrowVision{
+    top: 60%;
+  }
+  .scrollBtn{
+    bottom: 5%;
+    //left: -3%;
+  }
+  .mainIntro{
+    //height: 600px;
+    padding: 200px 228px 200px 288px;
+  }
+
+  .orangeLeaf{
+    width: 72px;
+    height: 74px;
+    bottom: -25%;
+  }
+  .yellowLeaf{
+    width: 89px;
+    height: 88px;
+    bottom: -18%;
+    transform: rotate(-20deg);
+  }
+  .greenLeaf{
+    top:3%;
+    width: 82px;
+    height: 85px;
+    left: 99%;
+  }
+  .purpleLeaf{
+    top:-15%;
+    height: 61px;
+    width: 63px;
+  }
+  .outlineGreen{
+    top:-38%;
+    border-radius: 96px 0 96px 0;
+    height: 200px;
+    width: 198px;
+  }
+  .getStart{
+    height: 250px;
+    align-items: center;
+    margin-left: 0px;
+  }
+  .sideMenu{
+    display: block;
+  }
+  .imageBox {
+    max-width: 100vw;
+  }
+  .termsAndConditions{
+    max-width:100%;
+    min-height: 400px !important;
+  }
+  .topologyText{
+    top: 16%;
+  }
+
+  //.overLay1{
+  //  min-height: 940px;
+  //  max-width: 1920px;
+  //}
+//  .overLay2,.overLay3,{
+//    max-width: 1920px;
+//}
+  //.overLay2,.overLay3{
+  //  min-height: 688px;
+  //}
+
+
+  .professionalBtn{
+    display: block;
+    z-index: 1;
+
+  }
+  .getStart{
+    //margin: 323px 280px 380px 385px;
+    width: 58%;
+    height:400px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .mainchoice{
+    //padding: 50px 50px 70px 280px;
+    padding-top: 76px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .choiceBox{
+    width: 40%;
+  }
+
+  .sponsorBox{
+    display: block;
+    padding: 80px 75px 80px 190px;
+  }
+
+  .subText{
+    width: 100%;
+  }
+
+
+  .end{
+    flex-direction: row;
+    align-items: center;
+  }
+  .subGreenGoals{
+    padding: 120px 168px 120px 278px;
+    font-size: 36px;
+    font-weight: 600 !important ;
+  }
+  .lineHeight{
+    font-size: 64px;
+  }
+  .btn{
+    width: 150px;
+    height: 56px;
+  }
+  .footer,.footerCommitment{
+    padding: 43px 88px 41px 268px !important;
+  }
+  .subFontSize{
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .overLay{
+    height: 100%;
+  }
+}
+@include respondTo($xl){
+  .batch{
+    width: 250px;
+  }
+  .topologyText{
+    top: 35%;
+  }
+
+  .overLay1{
+    width: 100%;
+    left: 0;
+    //display: none;
+  }
+  .overLay2{
+    width: 99.6vw !important;
+  }
+  .web{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    position: relative;
+  }
+  .web2{
+    height: 675px !important;
+    width: 99.6vw !important;
+  }
+  .web1{
+    display: block;
+    width: 99.6vw;
+    height: 591px;
+    overflow: hidden;
+
+    position: relative;
+  }
+
+
+
+
+  .privacy,.copyRight{
+    width: 36%;
+  }
+  .scrollBtn{
+    left: -3%;
+  }
+  .subGreenGoals{
+    padding: 150px 200px 150px 280px;
+  }
+  .sponsorBox{
+    padding: 80px 200px 80px 280px;
+
+  }
+  .outlineGreen {
+    top: -197px;
+  }
+  .purpleLeaf{
+    top: -25%;
+  }
+  .yellowLeaf{
+    bottom: -40%;
+  }
+  .getStart{
+    top: 35%;
+    width: 60%;
+  }
+}
+@include respondTo($xxl){
+  .topologyText{
+    top: 45%;
+  }
+ .imageTest{
+   margin-left: 25vw;
+ }
+  .logo{
+    left: 1%;
+  }
+  .sideMenu{
+    left: 3%;
+    top: 35vh;
+  }
+  .web1,.overLay2{
+    width: 100vw !important;
+  }
+  .introBox{
+    width: 100%;
+  }
+  .outlineGreen{
+    top: -115%;
+  }
+  .purpleLeaf{
+    top: -45%;
+  }
+.subText{
+  width: 100%;
+}
+  .getStart{
+    width: 40vw;
+    left: 20%;
+  }
+.submit{
+  background: $primary-color !important;
+
+}
+  //.overLay3,.overLay2{
+  //  min-height: 900px;
+  //}
+  //.overLay1,.overLay2,.overLay3{
+  //  max-width: 100%;
+  //}
+}

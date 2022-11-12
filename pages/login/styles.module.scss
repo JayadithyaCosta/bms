@@ -1,0 +1,65 @@
+@import "styles/settings";
+
+.parentContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.loginBtn {
+    width: 100% !important;
+    border: none !important;
+    height: 48px !important;
+    border-radius: 8px !important;
+    background-color: $violet;
+    color: $white !important;
+}
+
+.loginContainer {
+    width: 535px;
+    height: 508px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.customWidth {
+    width: 100%;
+}
+
+.inputBox {
+    background: $rose !important;
+    color: $black !important;
+    height: 56px;
+}
+
+.input {
+    width: 100%;
+}
+
+.loginChoice {
+    width: 200px;
+    height: 63px;
+    background-color: $gray-color;
+    border-radius: 8px;
+    border: 1px solid $gray-color !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: $white;
+    margin: 22px;
+}
+
+.selectedBtn {
+    @extend .loginChoice;
+    background-color: $primary-color !important;
+}
+
+
+.loginChoicePurple {
+    @extend .loginChoice;
+    border: none !important;
+    background: $violet;
+}

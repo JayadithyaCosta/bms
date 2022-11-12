@@ -1,0 +1,428 @@
+@import "~bootstrap/scss/bootstrap.scss";
+@import "./fonts";
+@import "./carousal";
+@import "./settings";
+
+html {
+  font-size: 62.5%;
+  overflow-y: scroll;
+  scrollbar-color:$violet  $light-gray-color ;
+  scrollbar-width: thin;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Plus Jakarta Sans", "Work Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+  Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 0.4em;
+
+}
+*::-moz-viewport-scroll{
+  width: 0.4em;
+}
+
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.00);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: $violet;
+  outline: 1px solid $violet;
+}
+
+.intro-box {
+  position: relative;
+  width: 100%;
+  padding: 0 16px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-image-box {
+  position: relative;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  height: auto;
+
+  @include respondTo($md) {
+    width: 95%;
+    height: 300px;
+  }
+
+  @include respondTo($lg) {
+    width: 80%;
+    height: 400px;
+  }
+
+  @include respondTo($xxl) {
+    width: 80%;
+    height: 600px;
+  }
+}
+
+.content-box {
+  background-color: $disable-violet-color;
+  padding: 16px 24px;
+  margin: 24px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  max-width: 700px;
+
+  p {
+    line-height: 15px;
+  }
+
+  @include respondTo($md) {
+    p {
+      line-height: 24px;
+    }
+  }
+}
+
+.common-btn-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+
+}
+.common-slider-container{
+  @extend .common-btn-container;
+  height: 280px;
+}
+
+
+/* font size */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Plus Jakarta Sans";
+  line-height: 1;
+  margin: 0;
+  color: $off-black;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.6rem;
+}
+
+h6 {
+  font-size: 1.4rem;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0;
+  color: $off-black;
+}
+
+.text-jakarta {
+  font-family: "Plus Jakarta Sans" !important;
+}
+
+.text-work {
+  font-family: "Work Sans" !important;
+}
+
+/** typography */
+.text-bolder {
+  font-weight: 800 !important;
+}
+
+.text-bold {
+  font-weight: 700 !important;
+}
+
+.text-semi-bold {
+  font-weight: 600 !important;
+}
+
+.text-regular {
+  font-weight: 500 !important;
+}
+
+.text-normal {
+  font-weight: 400 !important;
+}
+
+.text-light {
+  font-weight: 300 !important;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+.marigin-bottom{
+  margin-bottom: 60px;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.underline {
+  text-decoration: underline;
+}
+.non-underline{
+  text-decoration: none !important;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.break-space {
+  white-space: break-spaces;
+}
+.background-dark{
+  background: $dark;
+}
+
+.line-height-100 {
+  line-height: 100%;
+}
+.slider-list {
+  width: 600% !important;
+  //transform: translate3d(calc(-50% - 50px), 0px, 0px) !important;
+}
+.text-wrap{
+  word-wrap: break-word;
+}
+.curserPoint{
+  cursor: pointer;
+}
+.createFont{
+  font-weight: 600 !important;
+  @include respondTo($lg){
+    font-weight: 700 !important;
+  }
+}
+//  .slide{
+//    width: 100% !important;
+//    @include respondTo($lg){
+//      width: 70% !important;
+//    }
+
+//  }
+//}
+.line-height-150 {
+  line-height: 150%;
+}
+.lineHeight30{
+  line-height: 30px;
+}
+.line-height-20{
+  line-height: 20px;
+}
+.cursorPointer{
+cursor: pointer;
+}
+.font36 {
+  font-size: 16px;
+  @include respondTo($lg) {
+    font-size: 36px;
+  }
+}
+
+.font32 {
+  font-size: 18px;
+  font-weight: 600;
+  @include respondTo($lg) {
+    font-size: 32px;
+    font-weight: 700;
+  }
+}
+
+.text-smallest {
+  font-size: 10px;
+}
+
+.text-dark {
+  color: $dark !important;
+}
+
+.text-off-black {
+  color: $off-black !important;
+}
+
+.text-black {
+  color: $almost-black;
+}
+
+.text-dark-gray {
+  color: $dark-gray-color
+}
+.css-1rhbuit-multiValue{
+  background-color: $primary-color !important;
+  color: $white;
+  border-radius: 4px !important;
+}
+.selectDropdown__indicator-separator{
+  display: none !important;
+}
+.selectDropdown__multi-value__label{
+  color: $white !important;
+}
+.text-orange{
+  color: $orange;
+}
+.text-red{
+  color: $red;
+}
+.text-heading{
+  font-size: 36px;
+  @include respondTo($lg){
+    font-size: 60px;
+  }
+}
+.text-vision{
+  font-size: 15px !important;
+  @include respondTo($lg){
+    font-size: 24px !important;
+  }
+}
+.text-contact{
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+}
+.text-size-60{
+  font-size: 24px !important;
+  @include respondTo($lg){
+    font-size: 60px !important;
+  }
+}
+.text-align-end{
+  text-align: end;
+}
+
+.text-gray {
+  color: $gray-color;
+}
+
+.text-violet {
+  color: $violet;
+}
+
+.text-white {
+  color: $white;
+}
+
+.text-green {
+  color: $green;
+}
+
+.text-dark-green {
+  color: $primary-color;
+}
+
+.text-danger {
+  color: $error-color !important;
+}
+
+.text-carbon-900-color {
+  color: $carbon-900-color;
+}
+
+.text-extra-small {
+  font-size: 1rem;
+}
+
+.text-small {
+  font-size: 1.2rem;
+}
+
+.text-medium {
+  font-size: 1.4rem;
+}
+
+.text-medium-15 {
+  font-size: 1.5rem;
+}
+
+.text-large {
+  font-size: 3.5rem;
+}
+
+.text-spacing-1 {
+  letter-spacing: 0.24rem;
+}
+
+.common-btn-size {
+  height: 37px;
+  width: 100%;
+  @include respondTo($md) {
+    margin-right: 10px;
+    width: 40%;
+  }
+  @include respondTo($lg) {
+    height: 82px;
+  }
+  @include respondTo($xl) {
+    width: 30%;
+  }
+}
+
+@include respondTo($lg) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  h5 {
+    font-size: 1.8rem;
+  }
+
+  h6 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}

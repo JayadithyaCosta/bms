@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../public/fonts/plus jakarta sans/PlusJakartaSans-Bold.woff")format("woff");
+  // src: url("../public/fonts/plus jakarta sans/PlusJakartaSans-Bold.ttf")format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../public/fonts/plus jakarta sans/PlusJakartaSans-SemiBold.woff")format("woff");
+  // src: url("../public/fonts/plus jakarta sans/PlusJakartaSans-SemiBold.ttf")format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../public/fonts/plus jakarta sans/PlusJakartaSans-Regular.woff")format("woff");
+  // src: url("../public/fonts/plus jakarta sans/PlusJakartaSans-Regular.ttf")format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../public/fonts/plus jakarta sans/PlusJakartaSans-Medium.woff")format("woff");
+  // src: url("../public/fonts/plus jakarta sans/PlusJakartaSans-Medium.ttf")format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Basis Grotesque Pro";
+  src: url("../public/fonts/BasisGrotesquePro-Regular.ttf")format("opentype");
+  // src: url("../public/fonts/plus jakarta sans/PlusJakartaSans-Medium.ttf")format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

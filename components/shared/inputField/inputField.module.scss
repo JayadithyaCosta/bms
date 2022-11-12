@@ -1,0 +1,208 @@
+@import "./../../../styles/settings";
+
+.formField {
+  position: relative;
+}
+
+.formLabel {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: $gray-color;
+  margin-bottom: 0;
+  position: absolute;
+  top: 50%;
+  margin-left: 15px;
+  transform: translate(0, -50%);
+  transition: all 0.4s ease-out;
+  cursor: text;
+}
+
+.noPlaceHolder {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important
+}
+
+.customField {
+  display: block;
+  width: 100%;
+  line-height: 1.5;
+  background-clip: padding-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-radius: 8px;
+  color: $off-black;
+  font-size: 14px;
+  padding: 20px 16px 8px;
+  padding-left: 16px;
+  background-color: $white;
+  border: 1px solid $light-gray-color;
+  box-shadow: none;
+  font-weight: 300;
+
+  &::placeholder {
+    opacity: 0;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    color: $off-black;
+    border: 1px solid $primary-color;
+    box-shadow: 1px $primary-color;
+  }
+  &:hover {
+    cursor: text;
+  }
+}
+
+.fontSize{
+  font-size: 12px;
+  color: $gray-color;
+  margin-left: 10px;
+}
+
+.error {
+  color: $error-color;
+  margin-left: 5px;
+  margin-top: 3px;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.customField:focus ~ .formLabel,
+.customField:not(:placeholder-shown) ~ .formLabel {
+  top: 12px;
+  font-size: 12px;
+}
+
+.showHidePassword {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  padding: 0;
+  transform: translate(0, -50%);
+
+  p {
+    text-decoration: underline;
+    color: $off-black;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  padding: 0;
+  transform: translate(0, -50%);
+}
+
+.formLabelNormal {
+  font-size: 14px;
+  font-weight: 300;
+  color: $gray-color;
+  margin-bottom: 0;
+  cursor: pointer;
+  max-width: 85%;
+}
+
+.form-check {
+  margin: 13px 0 !important;
+}
+
+.customCheckBox {
+  width: 1em;
+  height: 1em;
+  margin-top: 0.25em;
+  vertical-align: top;
+  //background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-print-color-adjust: exact;
+  border-radius: 3px !important;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  //background-color: $light-color;
+  //border-color: $text-dark-color;
+  float: left;
+  margin-left: -1.5em;
+  cursor: pointer;
+
+  &:hover {
+    //background-color: rgba($primary-color, 0.25);
+    //box-shadow: 0 0 2px 3px rgb($primary-color, 0.25);
+  }
+
+  &:focus {
+    //background-color: rgba($primary-color, 0.25);
+    //box-shadow: 0 0 2px 3px rgb($primary-color, 0.25);
+  }
+
+  &:checked {
+    //border-color: $secondary-color;
+    //background-color: $secondary-color;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+  }
+}
+
+.formRadioGroup {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.formRadio {
+  display: inline;
+  margin-right: 20px;
+  margin-bottom: 10px;
+
+  @include respondTo($md) {
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
+}
+
+.customRadio {
+  //background-color: $light-color;
+  cursor: pointer;
+  margin-left: 0;
+  margin-right: 8px;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.25em;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  //border: 1px solid $text-dark-color;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-print-color-adjust: exact;
+  border-radius: 50%;
+
+  &:hover {
+    //background-color: rgba($primary-color, 0.25);
+    //box-shadow: 0 0 2px 3px rgb($primary-color, 0.25);
+  }
+
+  &:focus {
+    //background-color: rgba($primary-color, 0.25);
+    //box-shadow: 0 0 2px 3px rgb($primary-color, 0.25);
+  }
+
+  &:checked[type="radio"] {
+    border: none;
+    //background-color: $secondary-color;
+    background-image: none;
+    //box-shadow: inset 0 0 0 2px rgb($white, 1), 0 0 0 2px rgb($primary-color, 1);
+  }
+}

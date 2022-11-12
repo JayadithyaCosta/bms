@@ -1,0 +1,27 @@
+@import './../../styles/settings';
+
+.container {
+  position: relative;
+  width: 100%;
+  padding: 0 60px;
+}
+.webView{
+  display: none;
+}
+.controlIcon{
+  padding: 0 !important;
+}
+@include respondTo($lg){
+  .webView{
+    display: flex;
+  }
+  .mobileView{
+    display: none;
+  }
+}
+@include respondTo($xl) {
+  .container {
+    padding: 0 0;
+  }
+
+}

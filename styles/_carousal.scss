@@ -1,0 +1,132 @@
+@import './settings';
+
+/** dashboard community carousal styles **/
+.communityCarousal {
+  .carousel-inner {
+    width: calc(100% + 80px);
+    margin-left: -40px;
+  }
+}
+
+.mobileDashboardSlider {
+  margin-bottom: 12px;
+}
+
+.carousel-indicators {
+  bottom: -15px !important;
+  margin-bottom: 0 !important;
+}
+
+.carousel-indicators [data-bs-target] {
+  border-radius: 4px !important;
+  width: 24px !important;
+  height: 4px !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  background-color: $gray-color !important;
+  padding: 1px;
+}
+
+.carousel-indicators .active {
+  width: 48px !important;
+  border-radius: 4px !important;
+  background-color: $violet !important;
+}
+/** .end dashboard community carousal styles **/
+
+.nuka-carousal-container {
+  top: 0 !important;
+}
+
+.nuka-carousal-btn {
+  display: none;
+}
+
+.nuka-carousal-btn[aria-selected='true'] {
+  display: none;
+}
+
+.slider-frame {
+  padding: 30px 0 !important;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousal-btn {
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: $white;
+  box-shadow: 0px 6px 6px -6px rgba(0, 0, 0, 0.16), 0px 0px 1px rgba(0, 0, 0, 0.4);
+  width: 32px;
+  height: 32px;
+  margin: 2px;
+  cursor: pointer;
+
+  svg {
+    color: $off-black;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.next-btn {
+  @extend .carousal-btn;
+  position: absolute;
+  top: 50%;
+  right: -50px;
+  transform: translateY(-50%);
+}
+
+.prev-btn {
+  @extend .carousal-btn;
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  right: unset;
+  transform: translateY(-50%);
+}
+
+@include respondTo($xl) {
+  .button-container {
+    justify-content: flex-end;
+    width: unset;
+    right: 0;
+    top: -15px;
+    transform: translateY(0);
+  }
+
+  .next-btn {
+    top: -25px;
+    right: 10px;
+    transform: translateY(0);
+  }
+  
+  .prev-btn {
+    top: -25px;
+    right: 50px;
+    left: unset;
+    transform: translateY(0);
+  }
+}
+@media print {
+  .mobileDashboardSlider{
+    display: none;
+  }
+}

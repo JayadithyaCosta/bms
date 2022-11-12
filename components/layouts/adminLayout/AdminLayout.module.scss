@@ -1,0 +1,123 @@
+@import '../../../styles//settings';
+
+.sidebarColor {
+    background-color: $sidebar-blue;
+    position: absolute !important;
+    /* display: flex; */
+    /* border-right: 1px solid #efefef; */
+    height: 54.8rem !important;
+    width: 250px !important;
+    min-width: 250px !important;
+    -webkit-transition: width,left,right,300ms;
+    transition: width,left,right,300ms;
+}
+
+.middleBox{
+    padding: 20px;
+     width: 100%;
+     height: 80vh;
+     display: flex;
+   
+     align-items: center;
+     flex-direction: column;
+   }
+.sidebarMenu {
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 3;
+
+}
+
+.sidebarTitleImage {
+    display: flex;
+    margin-top: 15px;
+}
+
+.menuContentSidebar {
+    text-decoration: unset !important;
+    font-style: unset !important;
+}
+
+.menuItem {
+    border-top: solid 2px $black;
+
+}
+
+@import '../../../styles/settings';
+
+.pageBody {
+    width: 100%;
+    height: 100vh;
+}
+
+.darkHeader {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #575B6C;
+    // background-color: rgb(112, 61, 255, 0.5);
+    // background-color: $carbon-50-color;
+    background: url('../../../public/images/images.jpg');
+    -webkit-background-size: 80% 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+}
+
+.middleContent {
+    padding: 125px 50px;
+    width: 100%;
+    height: 77vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 130px;
+    padding-right: 38px;
+    background-color: $pale-sky;
+
+}
+
+.footerMiddleContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerFont {
+    font-family: "Basis Grotesque Pro" !important;
+    font-size: 35px !important;
+    color: $black;
+    font-weight: 700;
+
+}
+
+.footerMainContent {
+    font-size: 12px !important;
+}
+
+.footerSubContent {
+    font-size: 12px !important;
+    margin-bottom: 5px;
+}
+
+.footerLinks {
+    cursor: pointer;
+    color: $white;
+    text-decoration: unset;
+}
+
+.footerLinks:hover {
+    color: $carbon-500-color;
+}

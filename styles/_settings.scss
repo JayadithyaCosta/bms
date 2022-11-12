@@ -1,0 +1,70 @@
+/** color variables */
+/** add the colors to the variables.module.scss file also, to extend the colors to the TS **/
+$primary-color: #37AE87;
+$carbon-900-color: #205644;
+$carbon-700-color: #2E8F70;
+$carbon-500-color: #65D8A7;
+$carbon-300-color: #ADE7CB;
+$carbon-50-color: #EBFAF2;
+$green: #00CB87;
+$orange: #FF8045;
+$light-orange-color: #FFAE89;
+$disable-orange-color: #FFE8DD;
+$yellow: #FFDF5E;
+$light-yellow-color: #FFDF5E;
+$disable-yellow-color: #FFF8DC;
+$rose: #FFF1F1;
+$light-rose-color: #FFF0F0;
+$disable-rose-color: #FFFAFA;
+$violet: #703DFF;
+$light-violet-color: #B89EFF;
+$violet-opacity-down: #7f5ce7;
+$disable-violet-color: #F5F1FF;
+$success-color: #85D8BD;
+$warning-color:#FDDE7C;
+$dark-red-color:#FF0000;
+$error-red-color:#FFE1E1;
+$pale-sky: #6b7482;
+$sidebar-blue: #afeeee;
+// $error-color: #F8866F;
+$information-color: #898EFE;
+$black: #000;
+$dark-gray-color: #575B6C;
+$gray-color: #8D909C;
+$light-gray-color: #CACBD1;
+$off-white-color: #FAFAFA;
+$background-light-color: #F5F5F5;
+$white: #FFFFFF;
+$base-20: #E3E3E3;
+$disable-color: #E9EAEC;
+$off-black: #494949;
+$almost-black: #171D29;
+$dark: #090F1C;
+$red: #E25C5C;
+$error-color: #FF4E64;
+$footerColor: #0F0F0F;
+
+/* Extra small devices (phones, 600px and down) */
+$xs: 320px;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+$sm: 600px;
+/* Medium devices (landscape tablets, 768px and up) */
+$md: 768px;
+/* Large devices (laptops/desktops, 992px and up) */
+$lg: 992px;
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+$xl: 1200px;
+/* 2K, 4K devices (large laptops and desktops, 2500px and up) */
+$xxl: 2500px;
+
+@mixin respondTo($break-point) {
+  @media only screen and (min-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin respondUpTo($break-point) {
+  @media only screen and (max-width: $break-point) {
+    @content;
+  }
+}

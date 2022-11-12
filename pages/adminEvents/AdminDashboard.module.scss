@@ -1,0 +1,946 @@
+@import "../../styles/settings";
+
+$sideMenuWidth: 200px;
+$sideMenuCollapsedWidth: 65px;
+$hederHeight: 80px;
+$footerHeight: 60px;
+.printAddressBAr,
+.pdfAvatar,
+.pdfView,
+.pdfLogo,
+.printFooter,
+.disclaimer,
+.pdfAvatarSize {
+  display: none;
+}
+.indecator {
+  width: 100%;
+  height: 1px;
+  background-color: $violet;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+.loader {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 5px;
+}
+.drawerNotification{
+  top:39%;
+  width: 100%;
+  height: 380px;
+  left: 54%;
+  @include respondTo($md){
+    left: 60%;
+  }
+  @include respondTo($lg){
+    left: 75%;
+  }
+
+
+}
+.drawerNotification::after{
+  content: " ";
+  position: absolute;
+  bottom: 100% !important; /* At the top of the tooltip */
+  left: 92% !important;
+  margin-left: -5px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent $disable-violet-color transparent transparent;
+  transform: rotate(90deg);
+  @include respondTo($lg) {
+    left: 88% !important;
+  }
+}
+.inputWidth{
+  width: 218px !important;
+}
+.notHead{
+  position: relative;
+  cursor: pointer;
+}
+.notificationSubHeader{
+
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
+.notificationDiv{
+  padding: 8px 24px;
+}
+.zeroNotification{
+  height: 290px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.disclaimerYellow {
+  border-radius: 4px;
+  background: $disable-orange-color;
+  padding: 10px;
+  width: 100%;
+}
+
+.disclaimerGray {
+  @extend .disclaimerYellow;
+  background: $disable-color;
+}
+
+.container {
+  position: relative;
+  background-color: $off-white-color;
+}
+.disability {
+  @extend .navButton;
+  color: $dark-gray-color !important;
+  &icon {
+    color: $dark-gray-color !important;
+  }
+}
+.disableIcon {
+  color: $dark-gray-color !important;
+}
+
+.link {
+  padding: 30px 20px 0 20px;
+}
+
+.section {
+  border: 1px solid $violet;
+  position: relative;
+//   border-left-width: 1px;
+//   border-top-width: 20px;
+  border-radius: 8px 8px 0 0;
+  padding: 8px;
+//   margin: 20px 0;
+    margin-left: 200px;
+
+//   &::before {
+//     content: attr(data-content);
+//     font-size: 12px;
+//     font-weight: 800;
+//     color: $white;
+//     position: absolute;
+//     left: 6px;
+//     top: -18px;
+//     line-height: 18px;
+//     writing-mode: horizontal-tb;
+//     text-orientation: mixed;
+//     transform: rotate(0);
+//   }
+}
+
+.shareoption {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  @include respondTo($md) {
+    width: 445px;
+    padding: 0 20px 0 20px;
+  }
+
+}
+
+.socialBtn:hover {
+  background-color: rgba(87, 91, 108, 0.20);
+  border-radius: 8rem !important;
+}
+
+.copyButton {
+  border: none !important;
+  background: $primary-color !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border-radius: 8px !important;
+}
+
+.webView {
+  display: none;
+  @include respondTo($lg) {
+    display: block;
+  }
+}
+
+.printDetails {
+  display: none;
+}
+
+.generatedLink {
+  width: 185px !important;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid $light-gray-color;
+  overflow: hidden;
+}
+
+.linkInput {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 40px 20px;
+}
+
+.avatar {
+  background-color: $violet-opacity-down;
+  border-radius: 12px;
+  height: 50px;
+  width: 50px;
+
+  overflow: hidden;
+}
+
+.avatarSize {
+  --height: 100%;
+  --width: 100%;
+}
+.insideModal{
+  background: $off-white-color;
+  border-radius: 4px;
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+}
+.sideMenu {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: $footerHeight;
+  padding: 0 0;
+  background-color: $almost-black;
+  z-index: 2;
+}
+
+.navigation {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 0;
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+  flex-direction: column;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  width: 100%;
+  padding: 12px 15px;
+  color: $white;
+  font-weight: 400;
+  font-size: 1rem;
+  background-color: transparent;
+  margin-bottom: 0;
+  font-weight: 400;
+  transition: all 0.5s ease-in-out;
+  height: 100%;
+
+  &Icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 22px;
+    width: 22px;
+    margin-right: 0;
+    color: $white;
+  }
+
+  &Active {
+    border-left: none;
+    background-color: transparent;
+    color: $primary-color;
+    font-weight: 500;
+    transition: all 0.5s ease-in-out;
+
+    .navButtonIcon {
+      color: $primary-color;
+    }
+  }
+}
+
+.addBtn {
+    width: 10% !important;
+    border: none !important;
+    height: 48px !important;
+    border-radius: 8px !important;
+    background-color: $violet !important;
+    color: $white !important;
+}
+
+.addBtnContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 35px;
+}
+
+.updateBtn {
+  @extend .addBtn;
+  width: 50px !important;
+  background-color: $violet !important;
+}
+
+
+.deleteBtn {
+  @extend .addBtn;
+  width: 50px !important;
+  background-color: $red !important;
+}
+
+.lineBreak {
+  display: none;
+  width: 100%;
+  height: 1px;
+  background-color: $base-20;
+  margin: 20px 0 25px 0;
+}
+
+.contentArea {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  margin-left: 0;
+  padding: 0 16px;
+  position: relative;
+  background-color: $background-light-color;
+}
+
+.header {
+  @extend .contentArea;
+  flex-direction: row;
+  position: fixed;
+  left: 0;
+  margin-left: 0;
+  right: 0;
+  top: 0;
+  align-items: center;
+  height: $hederHeight;
+  justify-content: space-between;
+  padding: 0 16px;
+  background-color: $violet;
+  z-index: 3;
+}
+
+.notification {
+  position: relative;
+  margin-left: 10px;
+  width: 22px;
+  height: 22px;
+  color: $white;
+  cursor: pointer;
+
+  &Indicator {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $red;
+    border: 1px solid $white;
+  }
+}
+
+.backButton {
+  height: 42px !important;
+  border-radius: 8px !important;
+  border: none !important;
+  padding: 12px 16px !important;
+  background: transparent !important;
+  cursor: pointer;
+}
+
+.info {
+  width: 40px;
+  height: 40px;
+}
+
+.contentBox {
+//   margin-top: $hederHeight;
+  
+  margin-bottom: $footerHeight;
+  width: 100%;
+  padding: 5px 0;
+}
+
+.dashboardTitle {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+  margin: 15px 0;
+  width: 100%;
+
+  span {
+    font-weight: 600;
+
+    &:first-child {
+      text-decoration: underline;
+    }
+  }
+}
+
+.bottomBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.bottomIconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  margin: 0 3px;
+  cursor: pointer;
+  width: 27px !important;
+  height: 25px !important;
+  padding: 0 !important;
+
+  &:focus {
+    outline: none;
+  }
+}
+.bottomIconButtonPDF{
+  @extend .bottomIconButton;
+  display: none;
+}
+.red {
+  color: $error-color;
+}
+
+.orange {
+  color: $orange;
+}
+
+.green {
+  color: $primary-color;
+}
+
+.gridContainer {
+  display: grid;
+  padding: 10px 0;
+  gap: 2rem;
+  grid-template-columns: 100%;
+}
+
+.gridSeperator {
+  grid-column: span 4;
+  height: 1px;
+  width: 100%;
+  background-color: $light-gray-color;
+  display: none;
+}
+
+.goalsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btnHeight {
+  height: 40px;
+}
+
+.trackButton {
+  background-color: $light-gray-color !important;
+  border: none !important;
+  cursor: not-allowed !important;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px !important;
+}
+
+.gridContainer2 {
+  display: block;
+  padding: 10px 0;
+  gap: 2rem;
+  grid-template-columns: 100%;
+}
+
+.alertBox {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border-radius: 12px;
+  background-color: $disable-violet-color;
+  padding: 13px 20px;
+  cursor: pointer;
+}
+
+.logoBox {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-right: 16px;
+  background: $almost-black;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mw75 {
+  max-width: 75%;
+}
+
+.verificationBanner {
+  width: 100%;
+  background-color: $rose;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+@include respondTo($md) {
+  .bottomIconButtonPDF{
+    width: 27px !important;
+    height: 25px !important;
+    display: block;
+  }
+  .generatedLink{
+    width: 310px !important;
+  }
+  .inputWidth{
+    width: 320px !important;
+  }
+  .section {
+    border-left-width: 1px;
+    border-top-width: 1px;
+    padding: 20px;
+
+    // &::before {
+    //   font-size: 18px;
+    //   left: -30px;
+    //   top: 16px;
+    //   line-height: 23px;
+    //   writing-mode: vertical-rl;
+    //   text-orientation: mixed;
+    //   transform: rotate(180deg);
+    // }
+  }
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gridContainer2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contentArea {
+    padding: 0 30px;
+  }
+}
+
+@include respondTo($lg) {
+  .zeroNotification{
+    height: 450px;
+  }
+  .drawerNotification{
+   left: 82%;
+    top: 50%;
+    width: 378px;
+    height: 600px;
+  }
+  .gridContainer2 {
+    grid-template-columns: 100%;
+  }
+  .avatar {
+    margin-right: 15px;
+  }
+  .mobileHeading {
+    display: none;
+  }
+  .contentArea {
+    padding: 0 40px;
+  }
+
+  .dashboardTitle {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin: 30px 0;
+    width: 65%;
+  }
+}
+
+@include respondTo($xl) {
+  .drawerNotification{
+    left: 87%;
+  }
+  .section {
+    // padding: 30px;
+  }
+
+  .contentAreaNormal {
+    padding: 0 20px;
+    width: calc(100% - #{$sideMenuWidth});
+    max-width: calc(100% - #{$sideMenuWidth});
+    min-width: calc(100% - #{$sideMenuWidth});
+    margin-left: $sideMenuWidth;
+    transition: all ease-out 0.5s;
+  }
+
+  .contentAreaExpanded {
+    padding: 0 20px;
+    width: calc(100% - #{$sideMenuCollapsedWidth});
+    max-width: calc(100% - #{$sideMenuCollapsedWidth});
+    min-width: calc(100% - #{$sideMenuCollapsedWidth});
+    margin-left: $sideMenuCollapsedWidth;
+    transition: all ease-out 0.5s;
+  }
+
+  .collapsedLogo {
+    width: 28px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+  .cursorPoint{
+    cursor: pointer;
+  }
+
+  .sideMenu {
+    align-items: flex-start;
+    flex-direction: column;
+    top: 0;
+    bottom: auto;
+    height: 100vh;
+    z-index: 3;
+    transition: all ease-out 0.5s;
+  }
+
+  .sideMenuNormal {
+    width: $sideMenuWidth;
+    padding: 30px 24px;
+  }
+
+  .sideMenuCollapsed {
+    width: $sideMenuCollapsedWidth;
+    padding: 30px 10px;
+  }
+
+  .navigation {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 50px;
+  }
+
+  .navButton {
+    flex-direction: row;
+    padding: 9px 6px;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    transition: all ease-out 0.5s;
+    height: 40px;
+
+    &Icon {
+      height: 18px;
+      width: 18px;
+      margin-right: 15px;
+    }
+
+    &Active {
+      border-left: 4px solid $green;
+      background-color: $white;
+      font-weight: 600;
+    }
+  }
+
+  .contentBox {
+    margin-bottom: 0;
+  }
+
+  .notification {
+    margin-left: 0;
+  }
+
+  .logoBox {
+    width: 65px;
+    height: 65px;
+  }
+
+  .header {
+    margin-left: 0;
+    padding: 0 40px;
+    transition: all ease-out 0.5s;
+  }
+
+  .headerNormal {
+    @extend .contentAreaNormal;
+    left: $sideMenuWidth;
+  }
+
+  .hedearNavCollapsed {
+    @extend .contentAreaExpanded;
+    left: $sideMenuCollapsedWidth;
+  }
+
+  .bottomBox {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .bottomIconButton {
+    width: 35px;
+    height: 25px;
+  }
+
+  .lineBreak {
+    display: block;
+  }
+
+  .gridColSpan2 {
+    grid-column: span 2;
+  }
+
+  .gridRowSpan2 {
+    grid-row: span 2;
+  }
+
+  .issueCard {
+    grid-column: span 2;
+  }
+
+  .energyCard {
+    grid-column: 1 / 3;
+  }
+
+  .co2Card {
+    grid-column: 3;
+    grid-row: 3 / 5;
+  }
+
+  .goalsContainer {
+    grid-column: 4;
+    grid-row: 4 / 6;
+  }
+
+  .gridContainer {
+    grid-template-columns: 210px 210px repeat(2, 1fr);
+  }
+
+  .gridSeperator {
+    display: flex;
+  }
+
+  .gridColSpan2 {
+    grid-column: span 2;
+  }
+
+  .gridRowSpan2 {
+    grid-row: span 2;
+  }
+
+  .issueCard {
+    grid-column: span 2;
+  }
+
+  .energyCard {
+    grid-column: 1 / 3;
+  }
+
+  .co2Card {
+    grid-column: 3;
+    grid-row: 4 / 6;
+  }
+
+  .goalsContainer {
+    grid-column: 4;
+    grid-row: 4 / 6;
+  }
+}
+@include respondTo($xxl){
+  .drawerNotification{
+    top: 32%;
+    left: 92%;
+  }
+}
+
+@media print {
+  .section{
+    border: none;
+    margin: unset;
+  }
+
+  .gridColSpan2,
+  .borderPrint {
+    border-right: 1px solid $light-gray-color;
+    border-bottom: 1px solid $light-gray-color;
+  }
+  .co2Card {
+    border-right: 1px solid $light-gray-color;
+  }
+  .printFooter {
+    //background: $black;
+    //height: 50px;
+    justify-content: flex-end;
+    width: 100%;
+    display: flex;
+    bottom: 0;
+    //right: 5px;
+    position: fixed;
+  }
+  .footerLogo{
+    position: relative;
+    margin: 0 30px 20px 0;
+    width: 76px;
+    height: 23px;
+  }
+  .disclaimer {
+    display: block;
+    margin-top: 40px !important;
+    page-break-before: always !important;
+  }
+  .verificationBanner {
+    display: none !important;
+  }
+  .printDetails {
+    width: 45%;
+    height: 280px;
+    display: block;
+  }
+  .carousal,
+  .alertBox,
+  .bottomBox {
+    display: none;
+  }
+  .sideMenu {
+    display: none !important;
+  }
+  .homeImp {
+    page-break-before: always !important;
+    margin-top: 50px !important;
+    //margin-top: 190px !important;
+  }
+  .pageBreak{
+    page-break-before: always !important;
+    margin-top: 25px;
+  }
+  .dashboardTitle {
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    line-height: 15px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+  }
+
+  .header {
+    display: flex;
+    position: fixed;
+    background: $almost-black;
+  }
+  .pdfHide {
+    display: none !important;
+  }
+  .pdfAvatarSize {
+    display: block;
+    height: 50px;
+    width: 50px;
+    background: rgba(169, 169, 169, 0.28);
+    border-radius: 12px;
+  }
+  .pdfView {
+    display: block;
+  }
+  //.pdfHeader{
+  //  position: fixed;
+  //  display: flex;
+  //}
+  .gridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    row-gap: 2rem;
+    padding: 0 0 0 5px;
+  }
+  .goalsContainer {
+    display: none;
+  }
+
+  .printAddressBAr {
+    display: flex;
+    position: fixed;
+    width: 96%;
+    justify-content: space-between;
+  }
+  .pdfLogo {
+    height: 12px;
+    width: 127px;
+    display: block;
+  }
+  .pdfAvatar {
+    display: flex;
+    align-items: center;
+  }
+  .notification {
+    display: none;
+  }
+  .avatar {
+    display: none;
+  }
+}
+.modal{
+  width: 270px !important;
+  padding: 20px;
+  @include respondTo($md){
+    width: 435px !important;
+    min-height: 200px;
+  }
+}
+//.inputWidth{
+//  width: 320px !important;
+//}
+.primary{
+  background-color: $primary-color !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 10px !important;
+}
+.borderBottom{
+  padding: 0;
+  border-bottom: 1px solid $light-gray-color;
+  @include respondTo($md){
+    padding: 15px 0;
+  }
+}
+.borderBottom1{
+  //@extend .borderBottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $off-white-color;
+  border-radius: 4px;
+  padding: 20px 0;
+}
+.widthInputTitle{
+  width: 80%;
+}
+.textFont{
+  font-size: 14px !important;
+}
+
+
+.tableContainer {
+  width: 132rem;
+  margin-left: 205px;
+  margin-top: 2rem
+}
