@@ -10,8 +10,9 @@ import BookClub3 from "../../public/images/hImage3.jpg";
 
 const ControlledCarousel = () => {
   const [index, setIndex] = useState(0);
+  let randNum = Math.random()
 
-  const handleSelect = (selectedIndex: number, e: HTMLInputElement) => {
+  const handleSelect = (selectedIndex: number, e: any) => {
     setIndex(selectedIndex);
   };
 
@@ -33,7 +34,7 @@ const ControlledCarousel = () => {
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
   
-          <Carousel.Item key={`images-${index}`}>
+          <Carousel.Item key={`images-${randNum}`}>
               <Image
                 className="d-block w-100"
                 style={{height: '450px'}}
@@ -42,7 +43,7 @@ const ControlledCarousel = () => {
             />
             </Carousel.Item>
 
-            <Carousel.Item key={`images-${index}`}>
+            <Carousel.Item key={`images-${randNum}`}>
               <Image
                 className="d-block w-100"
                 style={{height: '450px'}}
@@ -51,7 +52,7 @@ const ControlledCarousel = () => {
             />
             </Carousel.Item>
 
-            <Carousel.Item key={`images-${index}`}>
+            <Carousel.Item key={`images-${randNum}`}>
               <Image
                 className="d-block w-100"
                 style={{height: '450px'}}

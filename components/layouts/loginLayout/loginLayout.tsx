@@ -1,11 +1,7 @@
 import React from "react";
 import styles from "./PageLayout.module.scss";
-import headerImage from "../../../public/images/eightHeader.png";
-import HeaderCarousal from "../../headerCarousal/headerCarousal";
 import CommunityCarousal from "../../communityCarousal/CommunityCarousal";
-import { Carousel } from "react-responsive-carousel";
 
-import Image from "next/image";
 import ControlledCarousel from "../../communityCarousal/CommunityCarousal";
 
 type loginLayoutProps = {

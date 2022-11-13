@@ -53,7 +53,7 @@ const EventForm = () => {
         {({ values }) => (
           <div
             className={'d-flex justify-content-center w-50'}
-            style={{ marginLeft: '23%' }}
+            style={{ marginLeft: '25%' }}
           >
             <Form className={'d-flex flex-column justify-content-center w-100'}>
               <div className="row mb-4">

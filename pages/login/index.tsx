@@ -18,9 +18,7 @@ const Login: NextPage = () => {
   const router = useRouter()
 
   const [loading, setLoading] = useState<boolean>(false)
-  const [employee, setEmployee] = useState(false)
   const [error, setError] = useState('')
-  const [admin, setAdmin] = useState(false)
   const initialValues = useMemo<LoginInitials>(() => {
     return {
       password: '',
@@ -58,16 +56,6 @@ const Login: NextPage = () => {
 
     window.sessionStorage.setItem('access_token', loginUser?.data.token)
 
-    // setTimeout(() => 2000)
-
-    if (employee && loginUser) {
-      router.push('/empEvents')
-    }
-
-    if (admin && loginUser) {
-      router.push('http://localhost:3000/adminEvents')
-    }
-
     setLoading(false)
   }
 
@@ -89,41 +77,6 @@ const Login: NextPage = () => {
           {({ values }) => (
             <Form className={'d-flex justify-content-center w-100 mt-5'}>
               <div className={styles.loginContainer}>
-                <div className="d-flex justify-content-center">
-                  <button
-                    className={
-                      employee ? styles.selectedBtn : styles.loginChoice
-                    }
-                    onClick={() => {
-                      setEmployee((a) => !a)
-                      setAdmin(false)
-                    }}
-                    type="button"
-                  >
-                    <h4 className="text-regular text-white">Employee</h4>
-                  </button>
-                  <button
-                    className={
-                      admin ? styles.selectedBtn : styles.loginChoicePurple
-                    }
-                    onClick={() => {
-                      setAdmin((a) => !a)
-                      setEmployee(false)
-                    }}
-                    type="button"
-                  >
-                    <h4 className="text-regular text-white">Admin</h4>
-                  </button>
-                </div>
-                {/* {employee ? (
-                    <h1 className="text-black w-100">
-                      Log into your employee account
-                    </h1>
-                  ) : (
-                    <h1 className="text-black w-100">
-                      Log into your admin account
-                    </h1>
-                  )} */}
                 <div className={styles.customWidth}>
                   <div className={`mt-5`}>
                     <InputField
